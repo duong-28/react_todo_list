@@ -12,9 +12,9 @@ function App() {
   return (
     <div>
       <h1>My To Do List</h1>
-      <TodoItem text="Finish Plus Project"/>
-      <TodoItem text="Feed Cat"/>
-      <TodoItem text="Be awesome"/>
+      {todos.map((todo, index) => (
+        <TodoItem text={todo} key={index} />
+      ))}
     </div>
   );
 }
